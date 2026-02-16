@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>هدية خاصة لـ رانيا ♥</title>
+  <style>
+    body { margin:0; font-family:Arial, sans-serif; background:#000; color:#fff; text-align:center; padding:20px; min-height:100vh; display:flex; align-items:center; justify-content:center; }
+    .container { max-width:600px; }
+    h1 { color:#ff69b4; font-size:3em; text-shadow:0 0 10px #ff1493; }
+    .date { font-size:1.8em; color:#ff1493; }
+    .msg { font-size:1.3em; line-height:1.6; margin:30px 0; }
+    img { width:100%; border-radius:15px; margin:20px 0; box-shadow:0 0 20px #ff69b4; }
+    #pass-screen { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.95); display:flex; flex-direction:column; justify-content:center; align-items:center; }
+    input, button { padding:15px; margin:10px; font-size:1.2em; border-radius:10px; border:none; }
+    button { background:#ff69b4; color:white; cursor:pointer; }
+  </style>
+</head>
+<body>
+  <div id="pass-screen">
+    <h2>ادخلي الباسورد عشان تشوفي الهدية يا قلبي ♥</h2>
+    <input type="password" id="pass" placeholder="الباسورد...">
+    <button onclick="check()">دخول</button>
+  </div>
+
+  <div id="content" style="display:none;">
+    <div class="container">
+      <h1>رانيا يا حبيبتي</h1>
+      <p class="date">3/1/2026 ♥</p>
+      <div class="msg">
+        <p>يا طيبة يا حنونة... كل سنة وأنتِ طيبة وأجمل سنة في حياتك</p>
+        <p>بحبك أوي وده هدية صغيرة من قلبي ليكي، افتحي الصور واستمتعي بالذكريات ♥</p>
+        <!-- أضف رسائلك الطويلة هنا -->
+      </div>
+      <img src="photo1.jpg" alt="ذكرى 1"> <!-- غير الأسماء بعد رفع الصور -->
+      <!-- أضف صور تانية: <img src="photo2.jpg" alt="ذكرى 2"> -->
+    </div>
+  </div>
+
+  <!-- أغنية خلفية (يوتيوب embed، غير VIDEO_ID بلينك الأغنية) -->
+  <iframe width="0" height="0" src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1&loop=1&playlist=VIDEO_ID" frameborder="0" allow="autoplay"></iframe>
+
+  <script>
+    function check() {
+      let p = document.getElementById('pass').value;
+      if (p === 'rania123') {  // غير الباسورد ده للي عايزه (مثل تاريخ ميلاد)
+        document.getElementById('pass-screen').style.display = 'none';
+        document.getElementById('content').style.display = 'block';
+      } else {
+        alert('الباسورد غلط، جربي تاني يا قلبي ♥');
+      }
+    }
+  </script>
+</body>
+</html>
